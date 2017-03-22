@@ -10,6 +10,7 @@
 
 	<build>
 		<plugins>
+			<!-- target Java 9 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -20,6 +21,7 @@
 					<release>9</release>
 				</configuration>
 			</plugin>
+			<!-- use toolchain to make Maven use JDK 9 -->
 			 <plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-toolchains-plugin</artifactId>
@@ -39,6 +41,20 @@
 									</goals>
 							</execution>
 					</executions>
+			</plugin>
+			<!-- make resulting JAR executable -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>org.codefx.demo.mvn_java9.Main</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
