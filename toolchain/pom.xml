@@ -5,8 +5,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.codefx.demo.mvn-java-9</groupId>
-	<artifactId>toolchain</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<artifactId>demo</artifactId>
+	<version>java-9</version>
 
 	<build>
 		<plugins>

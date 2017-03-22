@@ -1,4 +1,4 @@
-package org.codefx.demo.mvn_java9.toolchain;
+package org.codefx.demo.mvn_java9;
 
 import static java.lang.StackWalker.Option.RETAIN_CLASS_REFERENCE;
 
