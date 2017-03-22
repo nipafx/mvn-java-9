@@ -1,4 +1,8 @@
-Put this into ~/.m2/toolchains.xml:
+# Toolchain
+
+Using [Maven Toolchains][mvn-toolchains] it is easy to define Java 9 in the project's `pom.xml` and let every developer specify their path via the toolchain.
+
+Have a look at [the pom](pom.xml) and put this into `~/.m2/toolchains.xml`:
 
 ```xml
 <toolchains>
@@ -10,7 +14,7 @@ Put this into ~/.m2/toolchains.xml:
 			<vendor>oracle</vendor>
 		</provides>
 		<configuration>
-			<jdkHome>/path/to/jdk-9</jdkHome>
+			<jdkHome>/path/to/your/jdk-9</jdkHome>
 		</configuration>
 	</toolchain>
 	<toolchain>
@@ -20,8 +24,10 @@ Put this into ~/.m2/toolchains.xml:
 			<vendor>oracle</vendor>
 		</provides>
 		<configuration>
-			<jdkHome>/path/to/jdk-8</jdkHome>
+			<jdkHome>/path/to/your/jdk-8</jdkHome>
 		</configuration>
 	</toolchain>
 </toolchains>
 ```
+
+[mvn-toolchains]: https://maven.apache.org/guides/mini/guide-using-toolchains.html
