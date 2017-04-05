@@ -32,7 +32,8 @@ Have a look at [the pom](pom.xml) and put this into `~/.m2/toolchains.xml`:
 
 ## Pros and Cons
 
-This is a clean approach as it makes obvious in the pom where the Java 9 compiler is supposed to come from.
+This is arguably the cleanest approach because it is project-specific and makes obvious in the pom where the Java 9 compiler is supposed to come from.
+
 It requires mucking with the pom, though, which in large legacy projects might not be your first choice.
 For a less intrusive way to build on Java 9, look at [the alternatives](..).
 
