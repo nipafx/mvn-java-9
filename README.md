@@ -11,7 +11,7 @@ Some approaches are more intrusive, others more brittle - have a look at the ind
 
 ## 💥 Compiler Arguments 💥
 
-In case you're trying to use some of the new command line options like `--add-modules`, be aware that the following doesn't work (at least not in `maven-compiler-plugin` version `3.6.1`):
+In case you're trying to use some of the new command line options like `--add-modules`, be aware that the following doesn't work:
 
 ```xml
 <plugin>
@@ -38,7 +38,7 @@ Usage: javac <options> <source files>
 use --help for a list of possible options
 ```
 
-Maybe this is common knowledge but it turns out that `<arg>` does not properly work with spaces, so I had to do the following instead:
+Apparently [it's common knowledge](https://twitter.com/rfscholte/status/849969556332437504) that `<arg>` will put arguments that contain a space into quotes before passing them, so I had to do the following instead:
 
 ```xml
 <compilerArgs>
