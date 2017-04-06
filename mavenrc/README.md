@@ -14,7 +14,6 @@ JAVA_HOME="/path/to/your/jdk-9"
 
 To compile with Java 9, for example to check whether your project builds without errors, this is a low ceremony approach as it requires no other changes.
 
-If you not only want to compile with Java 9 but also use Java 9 features, you still have to specify the target `1.9` in your [pom](pom.xml).
+If you not only want to compile with Java 9 but also use Java 9 features, you still have to specify `<release>9</release>` in your [pom](pom.xml).
 Note that this puts the pom into an awkward state where it is supposed to use JDK 9 but does not reference where it might come from (unlike the [toolchain approach](../toolchain)).
 Another disadvantage is that it must be repeated for every developer on the project.
-
