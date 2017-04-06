@@ -5,6 +5,7 @@ The goal is to be able to simply run `mvn clean install` and then launch the res
 
 * [toolchain](toolchain)
 * [.mavenrc](mavenrc)
+* [`<executable>`](executable)
 
 Some approaches are more intrusive, others more brittle - have a look at the individual solutions for a small discussion of its pros and cons.
 
